@@ -18,3 +18,12 @@ class BankAccount:
 account_julia = BankAccount("Julia", 100)
 account_timo = BankAccount("Timo", 50)
 print(account_julia > account_timo)
+
+
+class SubBankAccount(BankAccount):
+    def __init__(self, owner, balance):
+        super().__init__(owner, balance)
+
+
+sub = SubBankAccount("Thomas", 100)
+print(sub)
